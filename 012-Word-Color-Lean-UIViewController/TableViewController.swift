@@ -22,14 +22,9 @@ class TableViewController: UIViewController {
         var fear = WordColor(name: "Fear", color: MDColors.grey.P500)
         var lust = WordColor(name: "Lust", color: MDColors.red.P400)
         var spectacular = WordColor(name: "Spectacular", color: MDColors.orange.P500)
-    
 
+        var items:[String: [AnyObject]]!
     
-        var items:[[WordColor]]!
-    
-    
-        //var items = [["Belief", "Hope", "Valor", "Magic", "Faith"],["Victory", "Happiness", "Courage", "Conquer", "Fear"]]
-
         var dataSource: MultiSectionTableViewDataSource!
     
         @IBOutlet weak var tableView: UITableView!
@@ -37,7 +32,8 @@ class TableViewController: UIViewController {
         override func viewDidLoad() {
             super.viewDidLoad()
             
-            items = [[belief, hope, valor, magic], [faith, victory, happiness, fear, lust, spectacular]]
+            // pass a dictionary to datasource, the key will be the section title 
+            items = ["hero":[belief, hope, valor, magic], "born": [faith, victory, happiness, fear, lust, spectacular]]
             
             self.dataSource = MultiSectionTableViewDataSource(items: self.items, cellIdentifier: "taCell", configureBlock: { (cell, item) -> () in
                 if let actualCell = cell as? CustomTableViewCell {

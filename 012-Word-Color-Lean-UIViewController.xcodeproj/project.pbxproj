@@ -96,15 +96,9 @@
 			isa = PBXGroup;
 			children = (
 				76B586A71AD1D22600D5CAE8 /* WordColor.swift */,
-				76B586A81AD1D22600D5CAE8 /* CollectionViewController.swift */,
-				76B586A91AD1D22600D5CAE8 /* CustomCollectionViewCell.swift */,
-				76B586AA1AD1D22600D5CAE8 /* CollectionViewDataSource.swift */,
-				76B586AB1AD1D22600D5CAE8 /* ColorExtension.swift */,
-				76B586AC1AD1D22600D5CAE8 /* MDColors.swift */,
-				76B586AD1AD1D22600D5CAE8 /* CustomTableViewCell.swift */,
-				76B586AE1AD1D22600D5CAE8 /* MultiSectionTableViewDataSource.swift */,
-				76B586AF1AD1D22600D5CAE8 /* TableViewController.swift */,
-				76B586B01AD1D22600D5CAE8 /* TableViewDataSource.swift */,
+				76B586BD1AD1D5AC00D5CAE8 /* CollectionViewDemo */,
+				76B586BC1AD1D5A300D5CAE8 /* Helper */,
+				76B586BB1AD1D59B00D5CAE8 /* TableViewDemo */,
 				76B5868B1AD1D1F700D5CAE8 /* Main.storyboard */,
 				76B586851AD1D1F700D5CAE8 /* Supporting Files */,
 			);
@@ -137,6 +131,36 @@
 				76B5869C1AD1D1F700D5CAE8 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		76B586BB1AD1D59B00D5CAE8 /* TableViewDemo */ = {
+			isa = PBXGroup;
+			children = (
+				76B586AD1AD1D22600D5CAE8 /* CustomTableViewCell.swift */,
+				76B586AE1AD1D22600D5CAE8 /* MultiSectionTableViewDataSource.swift */,
+				76B586AF1AD1D22600D5CAE8 /* TableViewController.swift */,
+				76B586B01AD1D22600D5CAE8 /* TableViewDataSource.swift */,
+			);
+			name = TableViewDemo;
+			sourceTree = "<group>";
+		};
+		76B586BC1AD1D5A300D5CAE8 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				76B586AB1AD1D22600D5CAE8 /* ColorExtension.swift */,
+				76B586AC1AD1D22600D5CAE8 /* MDColors.swift */,
+			);
+			name = Helper;
+			sourceTree = "<group>";
+		};
+		76B586BD1AD1D5AC00D5CAE8 /* CollectionViewDemo */ = {
+			isa = PBXGroup;
+			children = (
+				76B586A81AD1D22600D5CAE8 /* CollectionViewController.swift */,
+				76B586A91AD1D22600D5CAE8 /* CustomCollectionViewCell.swift */,
+				76B586AA1AD1D22600D5CAE8 /* CollectionViewDataSource.swift */,
+			);
+			name = CollectionViewDemo;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -443,6 +467,7 @@
 				76B586A31AD1D1F700D5CAE8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		76B586A41AD1D1F700D5CAE8 /* Build configuration list for PBXNativeTarget "012-Word-Color-Lean-UIViewControllerTests" */ = {
 			isa = XCConfigurationList;
@@ -451,6 +476,7 @@
 				76B586A61AD1D1F700D5CAE8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -39,7 +39,6 @@ class CollectionViewController: UIViewController {
                 actualCell.configureForItem(item!)
             }
         })
-        
 
         collectionView.dataSource = self.dataSource
         

@@ -10,18 +10,30 @@ import Foundation
 import UIKit
 
 class MultiSectionTableViewDataSource: NSObject, UITableViewDataSource, UITableViewDelegate{
-    var items: NSArray = [[]]
-    var itemIdentifier: String?
+    var items: [[AnyObject]]!
+    var keys:[String]!
+    
+    var itemIdentifier: String!
     var configureCellBlock: TableViewCellConfigureBlock?
     
-    init(items: NSArray, cellIdentifier: String, configureBlock: TableViewCellConfigureBlock){
-        self.items = items
+    init(items: [String: [AnyObject]], cellIdentifier: String, configureBlock: TableViewCellConfigureBlock){
         self.itemIdentifier = cellIdentifier
         self.configureCellBlock = configureBlock
+        
+        for (K,V) in items {
+            if keys == nil {
+                self.items = [V]
+                self.keys = [K]
+            } else {
+                self.keys.append(K)
+                self.items.append(V)
+            }
+        }
+
     }
     
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-        return items.count
+        return keys.count
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -50,6 +62,6 @@ class MultiSectionTableViewDataSource: NSObject, UITableViewDataSource, UITableV
     }
     
     func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        return "Section \(section)"
+        return "Section \(keys[section])"
     }
 }
